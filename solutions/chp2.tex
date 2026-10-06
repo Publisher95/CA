@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+
+\title{Journal for Complex Analysis}
+\author{Michael Gavina}
+
+
+\usepackage{amssymb,amsfonts,amsmath,amsthm,url,graphicx}
+\graphicspath{ {./images/} }
+
+
+%\pagestyle{empty} % for no page numbers
+\setlength{\oddsidemargin}{-.1in}      % 1in left margin
+\setlength{\evensidemargin}{-.1in}     % 1in left margin (even pages)
+\setlength{\topmargin}{0in}           % 1.50in top margin
+\setlength{\textwidth}{6.7in}           % 6.3in text - 1.25in rt margin
+\setlength{\textheight}{9in}            % Body ht for 1in margins
+\addtolength{\topmargin}{-\headheight}  % No header, so compensate
+\addtolength{\topmargin}{-\headsep}     % for header height and separation
+%  End of margins and formatting params %
+\linespread{1}
+\setlength{\parindent}{0pt}
+
+
+\usepackage{color}
+\definecolor{cherry}{rgb}{0.9,.1,.2}
+\definecolor{green}{rgb}{.2,.7,0}
+\definecolor{blue}{rgb}{0,.0, .81}
+
+\def\green#1{\textcolor{green}{#1}}
+\def\cherry#1{\textcolor{cherry}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+
+\begin{document}
+\maketitle
+
+\textbf{\large Chapter 2}
+
+
+\noindent{\bf Task 44} What is the effect of each of these functions on point of the complex plane?\\
+
+
+\noindent{\bf a} $z \mapsto z + i$\\
+This Affine function is a translation up by 1 on the imaginary axis.\\
+
+
+\noindent{\bf b} $z \mapsto iz$\\
+The Affine function is a rotation by 1 on the imaginary axis.\\
+
+
+\noindent{\bf c} $z \mapsto iz + 4$\\
+This Affine function is a rotation by 1 on the imaginary axis and a translation of 4 on the real axis.\\
+
+
+\noindent{\bf d} $z \mapsto (1 + i)z$\\
+This is a rotation by 45 degrees and scale the complex number by $\sqrt{2}$.\\
+
+
+\noindent{\bf e} $z \mapsto 3z + 6i$\\
+This scales the vector up by 3, and translates it 6 in the imaginary axis.\\
+
+
+\noindent{\bf f} $z \mapsto 3 + 4i - z$\\
+This translates the vector by 3 in the real axis and 4 in the imaginary axis, while fliping the original complex number.\\
+
+
+\noindent{\bf Task 45} Find an affine function that rotates your square by: $\pi/2$ and $\pi$.\\
+I believe that $z \mapsto iz$ would rotate my sqaure by $\pi/2$ because the angle of $i$ is $\pi/2$.
+
+I believe that $z \mapsto -1z$ would rotate my sqaure by $\pi$ because the angle of $-1$ is $pi$.\\
+
+
+\noindent{\bf Task 46} Show that if $f(z) = az + b$ is an affine function, then $f$ has an inverse if and only if $a \neq 0$.\\ 
+
+Since $a \neq 0$, then $f'(z) = \frac{z-b}{a}$ would be the inverse function of a given affine function. 
+This must be the case because the operations of the affine function are reversed to find the original funciton.\\
+
+\noindent{\bf Task 47}\\
+
+\noindent{\bf a} $z \mapsto z + i$\\
+$f^{-1}(z) = z - i$\\
+The effects of this function will translate the complex number down one on the imaginary axis.\\
+
+
+\noindent{\bf b} $z \mapsto iz$\\
+$f^{-1}(z) = \frac{z}{i}$\\
+$f^{-1}(z) = z(-i)$\\
+The effects of this function will be, the complex number will be rotated by $\pi/2$ radians clockwise.\\
+
+
+\noindent{\bf c} $z \mapsto iz + 4$\\
+$f^{-1}(z) = (-i)(z - 4)$.\\
+$f^{-1}(z) = -iz + 4i$.\\
+The effects of this affine function will be that the complex number will be rotated $\pi/2$ radians clockwise and translated 4 up in along the imaginary axis.\\
+
+
+\noindent{\bf d} $z \mapsto (1 + i)z$\\
+$f^{-1}(z) = \frac{z}{1+i}$\\
+$f^{-1}(z) = z(\frac{1}{2} - i\frac{1}{2})$\\
+The effect of this affine function reverses the scaling done by the original function and rotates $\pi/2$ clockwise.\\
+
+\noindent{\bf e} $z \mapsto 3z + 6i$\\
+$f^{-1}(z) = \frac{z}{3} + 2i$\\
+The effect of this affine function scales down the complex number and translates it up along the imaginary axis.\\
+
+\noindent{\bf f} $z \mapsto 3 + 4i - z$\\
+$f^{-1}(z) = -z - 3 - 4i$\\
+The effect of this affine function reflects the complex number across the real axis, translates it down and to the left.\\
+
+
+
+\noindent{\bf Task 48} What is the effect of these fucntions on points on the complex plane?\\
+
+\noindent{\bf a} $z \mapsto \bar{z}$\\
+This affine function would just reflect the complex number across the real axis.\\
+
+\noindent{\bf b} $z \mapsto i\overline{z}$\\
+This affine function would reflect then rotate $\pi/2$ radians counterclockwise.\\
+
+\noindent{\bf c} $z \mapsto \bar{z} + 2i$\\
+This affine function would reflect across the real axis and translate up 2 on the imaginary axis.\\
+
+\noindent{\bf d} $z \mapsto -\bar{z} + 4$\\
+The affine function would reflect on the the real axis, then traslated four to the right, or on the real axis.\\
+
+\noindent{\bf e} $z \mapsto \bar{z} + 1$\\
+The affine function would reflect across the real axis, then translate to the right, 1 on the real axis.\\
+
+
+\noindent{\bf Task 49} Show that $f(z) = a\bar{z} + b$ has an inverse if and only if $a \neq 0$.\\
+$f^{-1}(z) = z = a\bar{z} + b$\\
+$f^{-1}(z) = z - b = a\bar{z}$\\
+$f^{-1}(z) = \frac{z - b}{a} = \bar{z}$\\
+Here, $a$ cannot be $0$.\\
+$f^{-1}(z) = \overline{\frac{z - b}{a}} = z$\\
+
+Thus, it is true that $f(z) = a\bar{z} + b$ has an inverse if and only if, $a \neq 0$.\\
+
+
+\noindent{\bf Task 50}\\
+
+\noindent{\bf a} $z \mapsto \bar{z}$\\
+$f^{-1}(z) = \bar{z}$\\
+This function is its own inverse.\\
+
+The effect of this function is just reflecting the complex number across the real axis.\\
+
+
+\noindent{\bf b} $z \mapsto i\overline{z}$\\
+$f^{-1}(z) = \overline{\frac{z}{i}}$\\
+$f^{-1}(z) = \overline{z(-i)}$\\
+
+Since the function was a rotation of $\pi/2$ radians in the counter clock-wise direction, it would be the case that the inverse function would be a $\pi/2$ radians rotation clock-wise around the origin.\\ 
+
+
+\noindent{\bf c} $z \mapsto \bar{z} + 2i$\\
+$f^{-1}(z) = \overline{z - 2i}$\\
+
+This functions effects are that the function will be translated 2 down along the imaginary axis, then the conjugate will be taken, which reflects the complex number across the real axis.\\
+
+\noindent{\bf d} $z \mapsto -\bar{z} + 4$\\
+$f^{-1}(z) = z - 4 = -\bar{z}$\\
+$f^{-1}(z) = -z + 4 = \bar{z}$\\
+$f^{-1}(z) = \overline{-z + 4} = z$\\
+
+This function first reflects diagonally across the origin then translates the complex number 4 along the real axis.\\
+
+
+\noindent{\bf e} $z \mapsto \bar{z} + 1$\\
+$f^{-1}(z) = \overline{z - 1}$
+
+This functino first translates the complex number by $-1$ along the real axis, then the conjugate gets taken, which reflects the complex number across the real axis.\\ 
+
+
+Here, I applied the inverse of the conjugate, the conjugate, last as the final operation.\\ 
+
+
+\noindent{\bf Task 51}\\
+
+
+
+
+
+\end{document}
