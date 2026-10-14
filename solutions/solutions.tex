@@ -1088,7 +1088,7 @@ $z = \overline{1/z}$\\
 Just by doing the order of operations, we can see that the function is its own inverse.\\
 
 
-\noindent{\bf d} Describe the function $z \mapsto 1/\bar{z}$ as a transformation of \mathbb{C}$\ {0} $\\
+\noindent{\bf d} Describe the function $z \mapsto 1/\bar{z}$ as a transformation of $\mathbb{C} \ {0} $\\
 
 With the polar form, the $r$ will equal $\sqrt{\frac{x^2+y^2}{(x^2+y^2)^2}}$ and the given angles will be $\tan(\frac{x}{y})$.\\
 So, it must be the case that every point will be scaled by that $r$, while the angle will stay the same.\\
@@ -1183,6 +1183,17 @@ If we define $R_-$ as ${z : $ Re $ z < 0}$, then this will have the same effect 
 
 \noindent{\bf Task 58} Show that if $a$ is any complex number besides 0, then there are two numbers $z \in \mathbb{C}$ such that $z^2 = a$.  How are these two square roots of $a$ related to each other algebraically and geometrically?\\
 
+$z^2 = 1$\\
+$(z-1)(z+1) = 0$\\
+
+$z^2 = -1$\\
+$(z + i)(z - i) = 0$\\
+
+Here we can see the resulting roots are directly opposed to one another. 
+Algebracically, we can say that there is one positve root and one negative root, like $\sqrt{z}$ and $-\sqrt{z}$.
+Geometrically, we can say the two roots are 180 degrees apart or $\pi$ radians apart.\\
+
+
 
 \noindent{\bf Task 59}What are the square roots of i? write them in the form $x + yi$.\\
 
@@ -1192,15 +1203,45 @@ $z^{1/2} = 1(\cos(\frac{\pi}{4}) + i\sin(\frac{\pi}{4}))$\\
 $z^{1/2} = (\frac{1}{\sqrt{2}} + i\frac{1}{\sqrt{2}})(-\frac{1}{\sqrt{2}} - i\frac{1}{\sqrt{2}})$\\
 
 
-\noindent{\bf Task 60}Explain why the convention of Definition 2.6.1 means that we have firmly decided $\sqrt{-1} = i$ no -i. \\
+\noindent{\bf Task 60}Explain why the convention of Definition 2.6.1 means that we have firmly decided $\sqrt{-1} = i$ not -i.\\
+
+The convention of Definition 2.6.1 means that we choose the closest angle from 1 going counter clock-wise.\\
+
+This is shown when: $z = -1$\\
+$\sqrt{z} = \sqrt{-1}$\\
+$z = 1(\cos(\pi) + i\sin(\pi))$
+$\sqrt{z} = 1(\cos(\frac{\pi}{2}) + i\sin(\frac{\pi}{2}))$, using the De Moivre's Theorem.\\
+$\sqrt{z} = i$\\
+
+Thus, since we have decided that the postive imaginary axis is going up, and the negative imginary axis is going down, then $i$ is defined as $\frac{\pi}{2}$ rotation.\\
+
 
 
 \noindent{\bf Task 61} What is the effect of the function $z \mapsto \sqrt{z}$ on points of $\mathbb{C}$?\\
 
+The points seem to get closer and closer to the postive real number line, but never touch it.
+This makes sense because we can always divide the angle of rotation by two, but that will never produce a 0 value.
+As well as the magnitude will square root in size.\\
 
 
 \noindent{\bf Task 62} Show that if $a,b,c$ are any complex numbers with $a \neq 0$, and $\sqrt{b^2 - 4ac}$ is the principal square root of $b^2 - 4ac$, then\\
+\begin{center}
+	$z = \frac{-b + \sqrt{b^2 - 4ac}}{2a}$ 
+	and
+	$z = \frac{-b - \sqrt{b^2 - 4ac}}{2a}$
+\end{center}
+and the solutions to $az^2 + bz + c = 0$.\\
 
+
+$z = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$\\ 
+$2az = -b \pm \sqrt{b^2 - 4ac}$\\ 
+$2az + b = \pm \sqrt{b^2 - 4ac}$\\ 
+$(2az + b)^2 = b^2 - 4ac$\\ 
+$4a^2z^2 + 4abz + b^2 = b^2 - 4ac$\\ 
+$4a^2z^2 + 4abz + 4ac = 0$\\ 
+$az^2 + bz + c = 0$\\
+
+Thus, by reversing the process of completing the square, it is shown that these must be the solutions for the complex polynomial.\\
 
 
 \noindent{\bf Task 63} Solve the following equations in $\mathbb{C}$.\\
@@ -1208,30 +1249,114 @@ $z^{1/2} = (\frac{1}{\sqrt{2}} + i\frac{1}{\sqrt{2}})(-\frac{1}{\sqrt{2}} - i\fr
 
 \noindent{\bf a} $z^2 + z + 1 = 0$\\
 
+$\frac{-1 \pm \sqrt{1-4}}{2}$\\
+$\frac{-1 \pm i\sqrt{3}}{2}$\\
+
+
 \noindent{\bf b} $z^2 - 2z + 2 = 0$\\
+
+$\frac{2 \pm \sqrt{4 - 8}}{2}$\\
+$\frac{2 \pm 2i}{2}$\\
+$1 \pm i$\\
+
 
 \noindent{\bf c} $z^2 + iz + 1 = 0$\\
 
+$\frac{-i \pm \sqrt{-1 - 4}}{2}$\\
+$\frac{-i \pm \sqrt{-5}}{2}$\\
+$\frac{i(-1 \pm \sqrt{5})}{2}$\\
+
+
 \noindent{\bf d} $z^2 + 2iz - 1 = 0$\\
 
+$\frac{-2i \pm \sqrt{-4 - 4}}{2}$\\
+$\frac{-2i \pm 2i\sqrt{2}}{2}$\\
+$\frac{2i(-1 \pm \sqrt{2})}{2}$\\
+
+
 \noindent{\bf e} $z^2 - (1 + i)z + i = 0$\\
+
+$\frac{-1-i \pm \sqrt{2i - 4i}}{2}$\\
+$\frac{-1-i \pm i\sqrt{2i}}{2}$\\
+$\frac{-1-i \pm i\sqrt{2}*(\frac{1+i}{\sqrt{2}}))}{2}$\\
+$\frac{-1-i \pm i(1+i)}{2}$\\
+$\frac{-1-i \pm i-1}{2}$\\
+
 
 \noindent{\bf Task 64}\\
 
 \noindent{\bf a} Find three numbers z such that $z^3 = 1$\\
 
+Since 1 cubed is 1, we know that one must be apart of the solutions.
+Knowing this we can do some polynomial division and divide out the $z-1$ solution.\\
+$(z-1)(z^2 + z + 1)$\\
+
+Taking the quadratic formula, we can find the other roots.\\
+
+$\frac{-1 \pm \sqrt{1-4}}{2}$\\
+$\frac{-1 \pm i\sqrt{3}}{2}$\\
+
+$(z-1)(z - \frac{-1 - i\sqrt{3}}{2})(z - \frac{-1 + i\sqrt{3}}{2})$\\
+
+
 \noindent{\bf b} Find three numbers z such that $z^3 = -1$\\
+
+Same process here as the last, we know that -1 cubed is -1.\\
+
+$(z+1)(z^2-z+1)$\\
+
+$\frac{1 \pm i\sqrt{3}}{2}$\\
+
+$(z+1)(z - \frac{1 - i\sqrt{3}}{2})(z - \frac{1 + i\sqrt{3}}{2})$\\
 
 \noindent{\bf c} Find three numbers z such that $z^3 = 8$\\
 
+Here the answer is a little different because the starting number is not 1, but $2^3 = 8$ so we know that one of the answers should be 2.\\
+
+
+$(z-3)(z^2+2z+4)$\\
+
+$\frac{-2 \pm \sqrt{4 - 16}}{2}$\\
+$\frac{-2 \pm i\sqrt{12}}{2}$\\
+$\frac{-2 \pm 2i\sqrt{3}}{2}$\\
+
+
+$(z-3)(z - \frac{-2 + 2i\sqrt{3}}{2})(z - \frac{-2 - 2i\sqrt{3}}{2})$\\
+
 \noindent{\bf d} Find three numbers z such that $z^3 = 8i$\\
 
+This problem is very different because now there is an i on the other side, but I still think that this is factorable.\\
 
+We know that the value of z when cubed as to get us to $8i$, but $2i$ is not that value, instead $-2i$ is that value.\\
+
+$(z-2i)$ will be our first solution.\\
+
+Thus,
+$(z-2i)(z^2 - 2iz - 4)$\\
+
+$\frac{2i \pm \sqrt{-4 + 16}}{2}$\\
+
+$(z-2i)(z - \frac{2i + \sqrt{-4 + 16}}{2})(z - \frac{2i - \sqrt{-4 + 16}}{2})$\\
+
+
+
+%TODO
 \noindent{\bf Task 65}Fix $n \geq 3$. Express the modulus and argument of $z^n$ in terms of the modulus and argument of $z$. What is the effect of the function $z \mapsto z^n$ on $\mathbb{C}$?\\
 
+
+
+%TODO
 \noindent{\bf Task 66}The solutions to $z^n = 1$ are called \textit{nth roots of unity.} Plot on separate Argand diagrams the nth roots of unity for $n = 2,3,4,5,6$.\\
 
+
+
+
+%TODO
 \noindent{\bf Task 67}Find a subset U of $\mathbb{C}$ whose image by the function $z \mapsto z^n$ covers all of $\mathbb{C}$ except 0 and the negative real axis.\\
+
+
+
+
 
 \noindent{\bf Task 68}Define a \textit{principal nth root} function $z \mapsto \sqrt[n]{z}$ on $\mathbb{C}$ for $n \geq 3$. 
 Explain why all the nth roots of z can be found by multiplying $\sqrt[n]{z}$ by the nth roots of unity. 
@@ -1245,12 +1370,11 @@ Finding the roots of unity shows us that the angles between the roots are equall
 
 When more roots of unity are found, n-sided polygons begin to be made.\\
 
-
+%TODO
 \noindent{\bf Task 69}Solve for the following equations in $\mathbb{C}$.\\
 
 
 \noindent{\bf a} $z^4 = -4$ \\
-$(z+1)(z-1)(z+i)(z-i)$\\
 
 
 \noindent{\bf b} $z^4 = 4 - 4i$\\
@@ -1271,6 +1395,19 @@ $(z+1)(z-1)(z+i)(z-i)$\\
 \noindent{\bf Task 71}\\
 
 
+\noindent{\bf Task 72}\\
+
+
+\noindent{\bf Task 73}\\
+
+
+\noindent{\bf Task 74}\\
+
+
+\noindent{\bf Task 75}\\
+
+
+\noindent{\bf Task 76}\\
 
 
 \end{document}
