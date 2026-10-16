@@ -1153,7 +1153,7 @@ The circles will square in radius and all angles will be doubled.\\
 \noindent{\bf c} What is the effect of $z \mapsto z^2$ on lines through the origin?\\
 Line through the origin will change depending on the values in front our variables.
 For intance, if we had an equation like $z = ac + ci$, where $c$ is the constant and $a$ is the scaler for the c, otherwise the answer is trivally always on the imaginary axis, then the answer will be that when $1 \geq c \geq -1$
-but $ c \noteq 0$, then the the line that will be made will only lie on the negative reals and positive imaginary axis. 
+but $c \neq 0$, then the the line that will be made will only lie on the negative reals and positive imaginary axis. 
 Otherwise the resulting line will always be in the positive real and imaginary axies.\\
 
 
@@ -1164,7 +1164,7 @@ This will result in some interesting changes, like lines through the origin will
 
 
 \noindent{\bf Task 57}Let $R_+$ \textit{right half-plane}\\
-$R_+ = {z: $ Re $z > 0}.$\\
+$R_+ = \{z: $ Re $z > 0\}.$\\
 
 
 \noindent{\bf a} Show that the image of $R_+$ by $z \mapsto z^2$ covers all of the $\mathbb{C}$ except 0 and the negative real axis.\\
@@ -1177,7 +1177,7 @@ However, this is a contradiction, if $b = 0$ then there is no imaginary componen
 
 \noindent{\bf b} Find another subset of $\mathbb{C}$, different from $R_+$, whose image by $z \mapsto z^2$ also covers all of $\mathbb{C}$ except 0 and the negative real axis.\\
 
-If we define $R_-$ as ${z : $ Re $ z < 0}$, then this will have the same effect as $R_+$ for $z \mapsto z^2$.\\
+If we define $R_-$ as $\{z : $ Re $ z < 0\}$, then this will have the same effect as $R_+$ for $z \mapsto z^2$.\\
 
 
 
@@ -1340,23 +1340,32 @@ $(z-2i)(z - \frac{2i + \sqrt{-4 + 16}}{2})(z - \frac{2i - \sqrt{-4 + 16}}{2})$\\
 
 
 
-%TODO
 \noindent{\bf Task 65}Fix $n \geq 3$. Express the modulus and argument of $z^n$ in terms of the modulus and argument of $z$. What is the effect of the function $z \mapsto z^n$ on $\mathbb{C}$?\\
 
+arg(z) $ = tan^{-1}(\frac{a}{b}) = \theta$\\
+
+Using De Moivre's theorem, we know that theta must be multiplied by n.\\
+arg($z^n$) $ =  n\theta$\\
 
 
-%TODO
+$|z| = \sqrt{a^2+b^2} = r$\\
+
+Using the representation for polar coordinates, we can easily find the modulus.\\
+$|z^n| = \sqrt{(a+bi)^n(a-bi)^n} = r^n$\\
+
+%todo
 \noindent{\bf Task 66}The solutions to $z^n = 1$ are called \textit{nth roots of unity.} Plot on separate Argand diagrams the nth roots of unity for $n = 2,3,4,5,6$.\\
 
 
 
 
-%TODO
+
 \noindent{\bf Task 67}Find a subset U of $\mathbb{C}$ whose image by the function $z \mapsto z^n$ covers all of $\mathbb{C}$ except 0 and the negative real axis.\\
 
-
-
-
+If we define U as the $\{ z : $ Re $ z > 0 \}$, then we have a subset of $\mathbb{C}$ where only the positive real numbers can exist, and thus, it would impossible for any of the real numbers to be negative, for either even or odd powers.
+For even powers of n, there can never be a solution where the resulting answer will be negative.
+For odd powers of n, only including the postive side of the real numbers will ensure that only postive numbers can be the inputs.\\
+For zero, the real value has to always be greater than 0.\\
 
 \noindent{\bf Task 68}Define a \textit{principal nth root} function $z \mapsto \sqrt[n]{z}$ on $\mathbb{C}$ for $n \geq 3$. 
 Explain why all the nth roots of z can be found by multiplying $\sqrt[n]{z}$ by the nth roots of unity. 
@@ -1370,44 +1379,111 @@ Finding the roots of unity shows us that the angles between the roots are equall
 
 When more roots of unity are found, n-sided polygons begin to be made.\\
 
-%TODO
 \noindent{\bf Task 69}Solve for the following equations in $\mathbb{C}$.\\
 
 
 \noindent{\bf a} $z^4 = -4$ \\
 
+Both $-i\sqrt[4]{4}i$ and $i\sqrt[4]{4}$ must be part of the solutions here, so we can divide them out of the equation.\\
+
+
+$(z-i\sqrt[4]{4})(z+i\sqrt[4]{4})(z^2 + 4)$\\
+This is an easy solution, so we just factor it out.\\
+
+$(z-i\sqrt[4]{4})(z+i\sqrt[4]{4})(z-2i)(z+2i)$\\
+
+Thus, these are the roots of $z^4 = -4$.\\
+
 
 \noindent{\bf b} $z^4 = 4 - 4i$\\
+
+Here, I will use the roots of unity for $z^4$, which are $(z+1), (z-1), (z+i)$ and $(z-i)$.\\
+
+I will also use polar coordinates, $|z| = \sqrt{32} = 4\sqrt{2}$ and arg(z) = $tan^{-1}(-1) = -\frac{\pi}{4}$.\\
+So, $\sqrt[4]{4\sqrt{2}}(\cos(-\frac{\pi}{8}) + i\sin(-\frac{\pi}{8}))$.\\
+
+Given that the roots of unity are muliplies of $\pi/2$, we can add one $\pi/2$ to our angle and get our numbers in polar coordinates.\\
+
+Thus the points are:\\
+
+$\sqrt[4]{4\sqrt{2}}(\cos(\frac{3\pi}{8}) + i\sin(\frac{3\pi}{8}))$.\\
+$\sqrt[4]{4\sqrt{2}}(\cos(\frac{7\pi}{8}) + i\sin(\frac{7\pi}{8}))$.\\
+$\sqrt[4]{4\sqrt{2}}(\cos(\frac{11\pi}{8}) + i\sin(\frac{11\pi}{8}))$.\\
+$\sqrt[4]{4\sqrt{2}}(\cos(\frac{15\pi}{8}) + i\sin(\frac{15\pi}{8}))$.\\
 
 
 \noindent{\bf c} $z^6 = -1$\\
 
+Here I will use polar forms and the roots of unity in polar coordinates, so:\\
+
+$(\cos(\frac{2n\pi}{6}) + i\sin(\frac{2n\pi}{6}))$ are the roots of unity where $n \leq 6$.\\
+
+The polar form for z would be $1(\cos(\frac{\pi}{2}) + i\sin(\frac{\pi}{2}))$.\\
+
+So the points would be:\\
+
+
+$1(\cos(\frac{5\pi}{6}) + i\sin(\frac{5\pi}{6}))$\\
+$1(\cos(\frac{9\pi}{6}) + i\sin(\frac{9\pi}{6}))$\\
+$1(\cos(\frac{13\pi}{6}) + i\sin(\frac{13\pi}{6}))$\\
+$1(\cos(\frac{17\pi}{6}) + i\sin(\frac{17\pi}{6}))$\\
 
 
 \noindent{\bf d} $z^6 = i$\\
 
+Here I will use polar forms and the roots of unity in polar coordinates, so:\\
+
+$(\cos(\frac{2n\pi}{6}) + i\sin(\frac{2n\pi}{6}))$ are the roots of unity where $n \leq 6$.\\
+
+The polar form for z would be $(\cos(\frac{\pi}{4}) + i\sin(\frac{\pi}{4}))$.\\
+
+So the points would be:\\
+
+$(\cos(\frac{14\pi}{24}) + i\sin(\frac{14\pi}{24}))$\\
+$(\cos(\frac{22\pi}{24}) + i\sin(\frac{22\pi}{24}))$\\
+$(\cos(\frac{30\pi}{24}) + i\sin(\frac{30\pi}{24}))$\\
+$(\cos(\frac{38\pi}{24}) + i\sin(\frac{38\pi}{24}))$\\
+$(\cos(\frac{46\pi}{24}) + i\sin(\frac{46\pi}{24}))$\\
+$(\cos(\frac{54\pi}{24}) + i\sin(\frac{54\pi}{24}))$\\
 
 
-\noindent{\bf Task 70}\\
-
+\noindent{\bf Task 70} Show that exp($z+w$) = (exp z)(exp w) for all $z,w \in \mathbb{C}$.\\
 
 
 \noindent{\bf Task 71}\\
 
+\noindent{\bf a} \\
+\noindent{\bf a} \\
+\noindent{\bf a} \\
+\noindent{\bf a} \\
+\noindent{\bf a} \\
 
 \noindent{\bf Task 72}\\
 
+\noindent{\bf a} \\
+\noindent{\bf a} \\
+\noindent{\bf a} \\
 
-\noindent{\bf Task 73}\\
-
-
-\noindent{\bf Task 74}\\
-
-
-\noindent{\bf Task 75}\\
+\noindent{\bf Task 73} What are the possible values of log 1? of log(-1)? of log 4i? of log(1+i)?\\
 
 
-\noindent{\bf Task 76}\\
+\noindent{\bf Task 74} Compute and plot $\log((1 + i)^n)$ and $\log((1-i\sqrt{3})^n)$ for $n = 1,2,3,4$.
+What do you notice?\\
+
+
+\noindent{\bf Task 75} Show that, if $z \ne 0$ and log z is any logarithm of z, then exp(log z) = z.\\
+
+
+\noindent{\bf Task 76} Explain why the domain of log z is $\mathbb{C}\ {0}$. 
+What is the effect of log z on its domain?\\
+
+\textbf{\large Chapter 3}
+
+
+
+
+
+
 
 
 \end{document}
