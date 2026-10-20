@@ -4,7 +4,7 @@
 \author{Michael Gavina}
 
 
-\usepackage{amssymb,amsfonts,amsmath,amsthm,url,graphicx,tikz}
+\usepackage{amssymb,amsfonts,amsmath,amsthm,url,graphicx,tikz,pgfplots}
 \graphicspath{ {./images/} }
 
 
@@ -1353,11 +1353,27 @@ $|z| = \sqrt{a^2+b^2} = r$\\
 Using the representation for polar coordinates, we can easily find the modulus.\\
 $|z^n| = \sqrt{(a+bi)^n(a-bi)^n} = r^n$\\
 
-%todo
 \noindent{\bf Task 66}The solutions to $z^n = 1$ are called \textit{nth roots of unity.} Plot on separate Argand diagrams the nth roots of unity for $n = 2,3,4,5,6$.\\
 
 
+\noindent{\bf a} $z^2 = 1$ \\
+\includegraphics[scale=0.25]{./images/task66-2.png}\\
 
+
+\noindent{\bf b} $z^3 = 1$ \\
+\includegraphics[scale=0.25]{./images/task66-3.png}\\
+
+
+\noindent{\bf c} $z^4 = 1$ \\
+\includegraphics[scale=0.25]{./images/task66-4.png}\\
+
+
+\noindent{\bf d} $z^5 = 1$ \\
+\includegraphics[scale=0.25]{./images/task66-5.png}\\
+
+
+\noindent{\bf e} $z^6 = 1$ \\
+\includegraphics[scale=0.25]{./images/task66-6.png}\\
 
 
 \noindent{\bf Task 67}Find a subset U of $\mathbb{C}$ whose image by the function $z \mapsto z^n$ covers all of $\mathbb{C}$ except 0 and the negative real axis.\\
@@ -1446,31 +1462,78 @@ $(\cos(\frac{38\pi}{24}) + i\sin(\frac{38\pi}{24}))$\\
 $(\cos(\frac{46\pi}{24}) + i\sin(\frac{46\pi}{24}))$\\
 $(\cos(\frac{54\pi}{24}) + i\sin(\frac{54\pi}{24}))$\\
 
-%todo
 \noindent{\bf Task 70} Show that exp($z+w$) = (exp z)(exp w) for all $z,w \in \mathbb{C}$.\\
 
-$z/w = e^{x}(\cos(y)+i\sin(y))$\\
+exp($z$) $ = e^{x}(\cos(y)+i\sin(y))$\\
+exp($w$) $ = e^{a}(\cos(b)+i\sin(b))$\\
 
-#
+exp($z$)exp($w$) $ = (e^x(\cos(y)+i\sin(y)))(e^a(\cos(b)+i\sin(b))$\\ 
+exp($z$)exp($w$) $ = (e^xe^a(\cos(y)\cos(b)+i\cos(y)\sin(b)+i\sin(y)\cos(b)-sin(y)sin(b)))$\\
+
+If we use the sum/difference identities we get:\\ 
+
+exp($z$)exp($w$) $ = (e^{x+a}(\cos(b+y)+i\sin(b+y)))$\\ 
+
+Then, $z + w = x+a + i(b+y)$, and such:\\
+
+exp($z+w$) $ = e^{x+a}(\cos(b+y) + i\sin(b+y))$.\\
+
+Thus, exp($z+w$) = (exp z)(exp w) must be true for all $z,w \in \mathbb{C}$.\\
 
 
-
-
-%todo
 \noindent{\bf Task 71}\\
 
-\noindent{\bf a} \\
-\noindent{\bf a} \\
-\noindent{\bf a} \\
-\noindent{\bf a} \\
-\noindent{\bf a} \\
+\noindent{\bf a} Express the modulus and argument of exp z in terms of the real and imaginary parts of z. \\
+
+The modulus of exp(z) is the real value of z, and the arg(exp(z)) is the imaginary part of z.\\ 
+
+
+\noindent{\bf b} What is the effect of $z \mapsto $ exp($z$) on vertical lines?\\
+
+$z = a + ci$\\
+
+This means that the arg(exp(z)) will be always constant, will the real will change over time. 
+This means that the modulus will increase while the angle will be the same resulting in a line going outward.\\ 
+
+
+\noindent{\bf c} What is the effect of $z \mapsto $ exp($z$) on horizontal lines?\\
+
+$z = c + bi$\\
+
+This means that the modulus will stay the same, but the angle will change over time, resulting in a circle like movement.\\
+
+
+\noindent{\bf d} What is the effect of $z \mapsto $ exp z on a line that is neither veritcal nor horizontal?\\
+
+$z = a + bi$\\
+
+This would result in a sprial like behavior. 
+This is because the modulus would grow while the angle would grow.
+
+Since these two factors are independent from one another, the rate of the spiral and the rate of the modulus growth can be different depending on the constants 
+
+
+\noindent{\bf e} Give as complete a description as you can of the function $ z \mapsto$ exp z as a transformation.\\
+
+
+
 
 %todo
 \noindent{\bf Task 72}\\
 
-\noindent{\bf a} \\
-\noindent{\bf a} \\
-\noindent{\bf a} \\
+\noindent{\bf a} Explain why exp z is never 0.\\
+
+exp(z) can never be 0 because there is no value for $e^x$ that produces zero.\\
+
+
+\noindent{\bf b} Show that, if $w \ne 0$, then $w =$ exp z for infinitely many values of z.\\
+
+
+
+
+\noindent{\bf c} Find a subset of $\mathbb{C}$ whose image by $z \mapsto$ exp z covers all of $\mathbb{C}$ except 0 and the negative real axis.\\
+
+
 
 %todo
 \noindent{\bf Task 73} What are the possible values of log 1? of log(-1)? of log 4i? of log(1+i)?\\
