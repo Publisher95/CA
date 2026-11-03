@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+
+\title{Exam 1}
+\author{Michael Gavina}
+
+
+\usepackage{amssymb,amsfonts,amsmath,amsthm,url,graphicx,tikz,pgfplots}
+\graphicspath{ {./images/} }
+
+
+%\pagestyle{empty} % for no page numbers
+\setlength{\oddsidemargin}{-.1in}      % 1in left margin
+\setlength{\evensidemargin}{-.1in}     % 1in left margin (even pages)
+\setlength{\topmargin}{0in}           % 1.50in top margin
+\setlength{\textwidth}{6.7in}           % 6.3in text - 1.25in rt margin
+\setlength{\textheight}{9in}            % Body ht for 1in margins
+\addtolength{\topmargin}{-\headheight}  % No header, so compensate
+\addtolength{\topmargin}{-\headsep}     % for header height and separation
+%  End of margins and formatting params %
+\linespread{1}
+\setlength{\parindent}{0pt}
+
+
+\usepackage{color}
+\definecolor{cherry}{rgb}{0.9,.1,.2}
+\definecolor{green}{rgb}{.2,.7,0}
+\definecolor{blue}{rgb}{0,.0, .81}
+
+\def\green#1{\textcolor{green}{#1}}
+\def\cherry#1{\textcolor{cherry}{#1}}
+\def\blue#1{\textcolor{blue}{#1}}
+
+\begin{document}
+\maketitle
+
+
+\begin{center}
+\textbf{\large Question 1}
+\end{center}
+
+\noindent{\bf a} Show that if $z \neq 0$, then $z^{-1} = \bar{z}/|z|^2$. \\
+$z^{-1} = \bar{z}/|z|^2$\\
+$1/z = \bar{z}/|z|^2$\\
+
+From here, we can make z it original rectangular coordinates.\\
+$1/z = \frac{1}{a+bi}$\\
+
+Here, it does not make sense to have i in the denominator, so we can use the conjugate to remove the i in the bottom.\\
+$1/z = \frac{1}{a+bi} = \frac{a-bi}{(a+bi)(a-bi)}$\\
+$1/z =  \frac{a-bi}{a^2 + b^2}$\\
+
+The final step is showing that they are the same.\\
+$\bar{z}/|z|^2 = \frac{a-bi}{a^2 + b^2}$\\
+
+%todo
+\noindent{\bf b} Suppose $z, w \in \mathbb{C}$. Show that $|zw| = |z| * |w|$. \\
+$z = r_1(\cos(\theta_{1}) + i\sin(\theta_{1}))$\\
+$w = r_2(\cos(\theta_{2}) + i\sin(\theta_{2}))$\\
+
+$|z| = r_1$, $|w| = r_2$, $|wz| = r_1r_2$.\\
+
+$wz = r_1*r_2(...)$\\
+
+$|z| * |w| = r_1 * r_2 = |wz|$\\
+
+
+\begin{center}
+\textbf{\large Question 2}
+\end{center}
+
+
+\noindent{\bf a} Express $5 + 12i$ in polar form. \\
+$|5 + 12i| = \sqrt{25 + 144} = \sqrt{169} = 13$\\
+$arg(5 + 12i) = \tan^{-1}(\frac{12}{5}) = 1.176$\\
+$5 + 12i = 13(\cos(1.176) + i\sin(1.176))$\\
+
+\noindent{\bf b} Express $7(\cos(4\pi/3) + i\sin(4\pi/3))$ in rectangular form. \\
+
+$7 * \cos(4\pi/3) = -\frac{7}{2} = Re$\\
+$7 * \sin(4\pi/3) = -\frac{7\sqrt{3}}{2} = Im$\\
+
+$7(\cos(4\pi/3) + i\sin(4\pi/3)) = -\frac{7}{2} - i\frac{7\sqrt{3}}{2}$\\ 
+
+
+\noindent{\bf c} Simplify: $\overline{5\sqrt{2} + 5\sqrt{2}i}/\sqrt[4]{-16}$ \\
+
+$\sqrt[4]{-16} = \sqrt{\sqrt{-16}}$\\
+$\sqrt[4]{-16} = \sqrt{4i}$\\
+$\sqrt[4]{-16} = 2(\frac{1}{\sqrt{2}} + i\frac{1}{\sqrt{2}}$\\
+$\sqrt[4]{-16} = \sqrt{2} + i\sqrt{2}$\\
+
+$\overline{5\sqrt{2} + 5\sqrt{2}i} = 5\sqrt{2} - 5\sqrt{2}i$\\
+
+$\frac{5\sqrt{2}-5\sqrt{2}i}{\sqrt{2} + i \sqrt{2}} = \frac{5-5i}{1 + i}$\\
+
+$\frac{(5-5i)(1-i)}{2} = \frac{10-10i}{2} = 5 - 5i$.\\
+
+\begin{center}
+\textbf{\large Question 3}
+\end{center}
+
+Let $f(z) = (2 - z)i$. Describe how $f$ transforms the complex plane.\\
+
+$z = a + bi$, $f(z) = 2i - ai - b$\\
+
+A geometric interperation would be that the function will move two on the real axis then rotate $\pi/2$ radians. 
+
+
+\begin{center}
+\textbf{\large Question 4}
+\end{center}
+
+
+\noindent{\bf a} $|z - 1 - i| = \sqrt{2}$ \\
+
+The geometric shape that this is, is a circle with radius 2 moved by -1-i units away from the original point.\\
+
+\noindent{\bf b} $|z - 1| = 2 - |z - i|$ \\
+
+The geometric shape is two circle in which where they meet will always have a distance of 2.\\
+
+
+\begin{center}
+\textbf{\large Question 5}
+\end{center}
+
+Show how to do task 32, and then use Task 32 to show how arg(zw) is related to arg(z) and arg(w).\\
+
+
+Let $z, w \in \mathbb{C}$ and $T_1$ be the triangle with vertices 0,1,and z let $T_2$ be the triangle with vertices 0, w, zw.\\
+
+Since the both z and w can be represented in polar coordinates, they can be multiplied in the same way:\\
+$z * w = r_1(...)*r_2(...)$\\
+This directly shows that the triangles must be similiar.\\
+
+Knowing this, the arg(zw) must be the arg(z) + arg(w), because the triangles must have to be rotated by some amount, and following angle theorems, we know this to be the case. 
+
+
+
+\end{document}
+
+
+
