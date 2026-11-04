@@ -4,7 +4,7 @@
 \author{Michael Gavina}
 
 
-\usepackage{amssymb,amsfonts,amsmath,amsthm,url,graphicx,tikz,pgfplots}
+\usepackage{amssymb,amsfonts,amsmath,amsthm,url,graphicx,tikz}
 \graphicspath{ {./images/} }
 
 
@@ -865,9 +865,9 @@ $(1 - i\sqrt{3})^{99} = 2^{99}(\cos(33\pi) + i\sin(33\pi))$\\
 $(1 - i\sqrt{3})^{99} = 2^{99}(-1)$\\
 $(1 - i\sqrt{3})^{99} = -2^{99}$\\
 
-
+\begin{center}
 \textbf{\large Chapter 2}
-
+\end{center}
 
 \noindent{\bf Task 44} What is the effect of each of these functions on point of the complex plane?\\
 
@@ -1622,14 +1622,19 @@ The domain of log z must be $\mathbb{C}\ {0}$ because the if the value is zero, 
 The effect of log z on its domain makes the modulus of the complex number the real value and makes the arg(z) into the imaginary part.\\
 
 
+\begin{center}
 \textbf{\large Chapter 3}
+\end{center}
 %\noindent{\bf a} \\
 
-%todo
 \noindent{\bf Task 77} Draw a picture of $N_{1/2}(2+3i)$, the $\frac{1}{2}$-neighborhood of 2 + 3$i$. 
 What can you say in general about the geometric appearance of an $\epsilon$-neighborhood?\\
 
+\begin{center}
+\includegraphics[scale=.5]{./images/task77.png}\\
+\end{center}
 
+Since for any given neighborhood distance, the point must be equal of N must be equal distance away the geometric shape that nieghborhoods produce is a circle.\\
 
 
 \noindent{\bf Task 78} Suppose $z \in N_1(0)$, and set $\epsilon = 1 - |z|$. 
@@ -1645,18 +1650,35 @@ Since this is the case, that distance must be the radius for the $N_{\epsilon}(z
 \noindent{\bf Task 79} Show that each of the following is an open subset of $\mathbb{C}$.\\
 
 
-\noindent{\bf a} \\
-\noindent{\bf a} \\
-\noindent{\bf a} \\
-\noindent{\bf a} \\
+\noindent{\bf a} the upper half-plane $\mathbb{H} = \{z : $ Im$ z > 0\}$ \\
+
+Here, if we take a point that is right above real number line, then can make an epsilon the distance from the point to the number line. 
+If we then move this point closer to the number line, then we get a circle that sinks in radius. 
+However, this circle will still be within $\mathbb{H}$ since we defined the epsilon as the distance from the number line below the point, then the circle will be contained within the $\mathbb{H}$ always.\\
+
+\noindent{\bf b} the punctured plane $\mathbb{C} \ \{0\}$\\
+
+Here, we can have zero as the main definition for epsilon, 
+
+
+\noindent{\bf c} an annulus such as $A = \{ z : 1 < |z| < 5 \}$ \\
+
+
+\noindent{\bf d} the empty set $\emptyset$ \\
 
 %todo
 \noindent{\bf Task 80} Explain why each of the following subsets of $\mathbb{C}$ is \underline{not} open.\\
 
 
-\noindent{\bf a} \\
-\noindent{\bf a} \\
-\noindent{\bf a} \\
+\noindent{\bf a} the real line $\mathbb{R} = \{ z: $ Im$ z = 0\}$ \\
+
+\noindent{\bf b} $\{ z : -\pi < $ Im $z \leq \pi \}$ \\
+
+\noindent{\bf c} ${1/n: n \in \mathbb{N}, n \neq 0}$ \\
+
+\noindent{\bf d} $\mathbb{C} \ {1/n : n \in \mathbb{N}, n \neq 0}$ \\
+
+
 
 %todo
 \noindent{\bf Task 81} Give an example of another subset of $\mathbb{C}$ that you think is open, and show that it is.\\
@@ -1688,11 +1710,11 @@ Here the boundary would be zero, as it is the only point in where epsilon can be
 Here the boundary would be a circle with radius 5 centered at the origin and and the unit circle.\\
 
 
-\noindent{\bf e} The empty set \emptyset \\
+\noindent{\bf e} The empty set $\emptyset$ \\
 
 The boundary is its own set.\\
 
-\noindent{\bf f} The real line $\matbb{R} = \{z: $ Im $z = 0\}$\\
+\noindent{\bf f} The real line $\mathbb{R} = \{z: $ Im $z = 0\}$\\
 
 The boundary is its own set.\\
 
@@ -1758,10 +1780,10 @@ Here the closure would be $\bar{\mathbb{D}}$,
 \noindent{\bf d} An annulus such as A $ = {z: 1 < |z| < 5}$\\
 
 
-\noindent{\bf e} The empty set \emptyset \\
+\noindent{\bf e} The empty set $\emptyset$ \\
 
 
-\noindent{\bf f} The real line $\matbb{R} = \{z: $ Im $z = 0\}$\\
+\noindent{\bf f} The real line $\mathbb{R} = \{z: $ Im $z = 0\}$\\
 
 
 \noindent{\bf g} ${z: -\pi < Im z \leq \pi}$\\
@@ -1781,16 +1803,88 @@ Here the closure would be $\bar{\mathbb{D}}$,
 
 
 %todo
-\noindent{\bf Task 87} \\
+\noindent{\bf Task 87} Suppose \[ \lim_{n\to\infty} z_n = L_1\] and \[ \lim_{n\to\infty} w_n = L_2\].  
+Use Theorem 1 and convergence properties of sequences of real numbers to explain why 
+\[\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2\] and \[\lim_{n\to\infty} z_nw_n = L_1L_2\].\\
+
+
 
 %todo
 \noindent{\bf Task 88} \\
 
-\noindent{\bf Task 89} \\
-\noindent{\bf Task 90} \\
-\noindent{\bf Task 91} \\
+\noindent{\bf a} Find sequences $z_n$ and $w_n$ such that \[\lim_{n\to\infty} (z_n + w_n)\] exists but \[\lim_{n\to\infty} z_n\] and  \[\lim_{n\to\infty} w_n\] do not.\\
+
+\noindent{\bf b} Find sequences $z_n$ and $w_n$ such that \[\lim_{n\to\infty} z_nw_n\] exists but \[\lim_{n\to\infty} z_n\] and  \[\lim_{n\to\infty} w_n\] do not.\\
+
+
+
+%todo
+\noindent{\bf Task 89} Suppose $B \subset \mathbb{C}$ is closed. Show that if $z_1,z_2,z_3,...$ is a sequence of points in B that converges to a limit L, then $L \in B$.\\
+
+
+
+%todo
+\noindent{\bf Task 90} Use Definition 3.4.1 and the results of task 87 to show the following.\\
+
+\noindent{\bf a} If $a,b \in \mathbb{C}$ are constants, then \[\lim_{z \to z_0} (az+b) = az_0 + b\].\\
+
+\noindent{\bf b} \[\lim_{z \to z_0} z^n = z^{n}_{0}\] for all $n \geq 1$.\\
+
+%todo
+\noindent{\bf Task 91} Determine whether each of the following limits exists, and if so what number it equals.\\
+
+\noindent{\bf a} \[\lim_{z \to 1+i} iz^2 - 2\bar{z} + 1\] \\
+
+\noindent{\bf b} \[\lim_{z \to i} \frac{z^2 + 1}{z-i}\] \\
+
+\noindent{\bf c} \[\lim_{z \to 1+2i} |z|\] \\
+
+\noindent{\bf d} \[\lim_{z \to 0} \frac{\bar{z}}{z}\] \\
+
+\noindent{\bf e} \[\lim_{z \to 1} \frac{|z|-1}{z-1}\] \\
+
+\noindent{\bf f} \[\lim_{z \to 0} (\frac{\bar{z}}{z})^2\] \\
+
+%todo
 \noindent{\bf Task 92} \\
-\noindent{\bf Task 93} \\
+
+\noindent{\bf a} Explain why $z \mapsto \bar{z}$ is continuous.\\
+
+
+\noindent{\bf b} Explain why $z \mapsto z^2$ is continuous.\\
+
+
+\noindent{\bf c} Explain why $z \mapsto \sqrt{z}$ is not continuous.\\
+
+
+
+%todo
+\noindent{\bf Task 93} Find an open subset U of $\mathbb{C}$, as large as possible, on which $z \mapsto z^2$ is one-to-one.
+What is the image of U? Call this image V. 
+How can you tell that $z \mapsto \sqrt{z}$ is continuous on V?\\
+
+
+\begin{center}
+\textbf{\large Chapter 4}
+\end{center}
+
+
+
+%todo
 \noindent{\bf Task 94} \\
+%todo
+\noindent{\bf Task 95} \\
+%todo
+\noindent{\bf Task 96} \\
+%todo
+\noindent{\bf Task 97} \\
+%todo
+\noindent{\bf Task 98} \\
+%todo
+\noindent{\bf Task 99} \\
+%todo
+\noindent{\bf Task 100} \\
+%todo
+\noindent{\bf Task 101} \\
 
 \end{document}
