@@ -1822,33 +1822,65 @@ Here the boundary points are the points of the set ${1/n: n \in \mathbb{N}, n \n
 Thus the closure for this set is $\mathbb{C}$.\\
 
 
-%todo
 \noindent{\bf Task 86} Determine whether each of the following sequences converges, and if so, to what limit.\\
 
 \noindent{\bf a} $z_n = i^n$ \\
 
+This limit does not converge.
+This will spin around the unit circle, from 1 to i to -1 to -i back to 1 which means that any one on these points could the L, which does not make sense.\\
+
 \noindent{\bf b} $z_n = i^n/n$ \\
+
+Here the limit does converge to 0.
+The best way to look at this is with the polar form representation, \[ \frac{1^n(\cos(n\theta) + i\sin(n\theta)}{2^n}\].
+Here since the magintude of i is always 1, then the denominator will grow infinately large and approach 0.
+Thus the limit for this expression is 0.\\
 
 \noindent{\bf c} $z_n = (\frac{1+i}{2})^n$ \\
 
+Here the denominator will grow faster than the numerator and thus the limit will be 0.\\
+
 \noindent{\bf d} $z_n = (1 - i\sqrt{3})^n$\\
+
+Since the limit is being taking over all of the complex number, the magintude of the number will always grow, and thus will never approach anything.\\
 
 \noindent{\bf e} $z_n = 1 - (\frac{i}{\sqrt{2}})^n$\\
 
+Since we can show that \[\frac{1}{\sqrt{2}}^n\] approach 0, then $(\frac{i}{\sqrt{2}})^n$ would also approach 0.
+Thus the term would be removed and the limit would converge to just 1.\\
+
 \noindent{\bf f} $z_n = (\frac{3}{5} + \frac{4}{5}i)^n$\\
 
+In polar coordinates, the \[1^n(\cos(n\theta) + i\sin(n\theta)\], thus as n approaches infinity, the magnitude would never change, and the angle would only be multiples of the original angle.\\
 
-%todo
+
 \noindent{\bf Task 87} Suppose \[ \lim_{n\to\infty} z_n = L_1\] and \[ \lim_{n\to\infty} w_n = L_2\].  
 Use Theorem 1 and convergence properties of sequences of real numbers to explain why 
 \[\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2\] and \[\lim_{n\to\infty} z_nw_n = L_1L_2\].\\
 
+For \[\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2\], 
+lets have $z_n = x_n + y_ni$ and $w_n = u_n + v_ni$.
+By Theorem 1, Re $L_1 = \lim{n\to\infty} x_n $, Im $L_1 = \lim_{n\to\infty} y_n$, Re $L_2 = \lim{n\to\infty} u_n$, Im $L_1 = \lim_{n\to\infty} y_n$.\\
+
+Then, $z_n + w_n = x_n + y_ni + u_n + v_ni = (x_n+u_n) + i(y_n+v_n)$, which then means we can take the real part and the imaginary parts of both to get:
+$\lim_{n\to\infty} (x_n+u_n) = $Re $ L_1 + L_2$, and $\lim_{n\to\infty} (y_n+v_n) = $Im $ L_1 + L_2$.
+Due to this, with both parts, Theorem 1 makes both parts again. 
+Thus \[\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2\]. 
+
+
+For \[\lim_{n\to\infty} (z_nw_n) = L_1L_2\],
+Similiarly we can break things up into the real and imaginary parts of both limits.
+$\lim_{n\to\infty} ((x_n+y_ni)(u_n+v_ni)) = (x_nu_n - y_nv_n) + i(x_nv_n + y_nu_n)$.
+Here, then the Re $L_1L_2 = x_nu_n - y_nv_n$ and the Im $L_1L_2 = x_nv_n = y_nu_n$. 
+By Theorem 1, both parts make the whole so, \[\lim_{n\to\infty} (z_nw_n) = L_1L_2\].\\
 
 
 %todo
 \noindent{\bf Task 88} \\
 
 \noindent{\bf a} Find sequences $z_n$ and $w_n$ such that \[\lim_{n\to\infty} (z_n + w_n)\] exists but \[\lim_{n\to\infty} z_n\] and  \[\lim_{n\to\infty} w_n\] do not.\\
+
+
 
 \noindent{\bf b} Find sequences $z_n$ and $w_n$ such that \[\lim_{n\to\infty} z_nw_n\] exists but \[\lim_{n\to\infty} z_n\] and  \[\lim_{n\to\infty} w_n\] do not.\\
 
@@ -1866,6 +1898,8 @@ Use Theorem 1 and convergence properties of sequences of real numbers to explain
 
 \noindent{\bf b} \[\lim_{z \to z_0} z^n = z^{n}_{0}\] for all $n \geq 1$.\\
 
+
+
 %todo
 \noindent{\bf Task 91} Determine whether each of the following limits exists, and if so what number it equals.\\
 
@@ -1880,6 +1914,8 @@ Use Theorem 1 and convergence properties of sequences of real numbers to explain
 \noindent{\bf e} \[\lim_{z \to 1} \frac{|z|-1}{z-1}\] \\
 
 \noindent{\bf f} \[\lim_{z \to 0} (\frac{\bar{z}}{z})^2\] \\
+
+
 
 %todo
 \noindent{\bf Task 92} \\
