@@ -1646,7 +1646,6 @@ In addtion, the new $\epsilon$ that is created for $N_{\epsilon}(z)$ must the di
 Since this is the case, that distance must be the radius for the $N_{\epsilon}(z)$ neighborhood, which will be less than or equal to the radius of $N_1(0)$.\\
 
 
-%todo
 \noindent{\bf Task 79} Show that each of the following is an open subset of $\mathbb{C}$.\\
 
 
@@ -1658,42 +1657,60 @@ However, this circle will still be within $\mathbb{H}$ since we defined the epsi
 
 \noindent{\bf b} the punctured plane $\mathbb{C} \ \{0\}$\\
 
-Here, we can have zero as the main definition for epsilon, 
-
+Here, we can have the definition for epsilon be the distance from the z point to 0. 
+Then any neighborhood with this epsilon can cover any point within the subset.\\
 
 \noindent{\bf c} an annulus such as $A = \{ z : 1 < |z| < 5 \}$ \\
+
+Since this is an annulus, this means that there is a strip in which any neighborhood could reside in.
+First, we can notice that this strip has constant area and does not change across the strip. 
+Then, we can find the find the point where the distance to 1 and 5 is equal. 
+This point is 3, (5+1)/2 = 3.
+Using this knowledge, we can make a $N_{3}(z)$ where $z \in B$, $B = {z : |z| = 3}$.\\
 
 
 \noindent{\bf d} the empty set $\emptyset$ \\
 
-%todo
+For the empty set, there is nothing in the empty set so there cannot be an epsilon value.
+However, since there are no values in the empty set, the condition is true automatically and thus it is an open set.\\
+
+
 \noindent{\bf Task 80} Explain why each of the following subsets of $\mathbb{C}$ is \underline{not} open.\\
 
 
-\noindent{\bf a} the real line $\mathbb{R} = \{ z: $ Im$ z = 0\}$ \\
+\noindent{\bf a} the real line $\mathbb{R} = \{ z:$ Im$ z = 0\}$ \\
+
+Here the real number line can only contain real numbers, so when a neighborhood is described, it does not make sense.
+This is because of the definition of a neighborhood, it requires the imaginary axis to capture all of the points around the points in the set.\\
+
 
 \noindent{\bf b} $\{ z : -\pi < $ Im $z \leq \pi \}$ \\
 
+This creates a strip from \[-\pi\] to \[\pi\], however, since the points on $\pi$ are in the set, you could have a point on that line be used as a point in a neighborhood.\\
+
+
 \noindent{\bf c} ${1/n: n \in \mathbb{N}, n \neq 0}$ \\
 
+This set has the same issue where the set is only on the real number axis, and thus cannot make a neighborhood.\\
+
 \noindent{\bf d} $\mathbb{C} \ {1/n : n \in \mathbb{N}, n \neq 0}$ \\
+This set is tricky because the set is removing the fractions where the denominator is a real numbers.
+However, as the natural numbers increase in size, the distance between each fraction will be smaller and smaller.
+This results in a problem where epsilon will always be greater than one, but when the limit is taken, then gap between the numbers will be zero, which epsilon cannot be.\\
 
 
-
-%todo
 \noindent{\bf Task 81} Give an example of another subset of $\mathbb{C}$ that you think is open, and show that it is.\\
 
 Another subset that is open is the $R_+$ subset where, $R_+ = \{z :$ Re $z > 0\}$. 
 This subset has to be open because if we take any point that isn't when Re z = 0, then there is a radius that can be drawn to the boundary and have that be a valid neighborhood.\\
 
 
-%todo
 \noindent{\bf Task 82} Determine the boundary of the open unit disk $\mathbb{D}$ and of each set in tasks 79 and 80.\\
 
 \noindent{\bf a} $\mathbb{D}$\\
 
 Here the boundary would be the unit circle, i.e. the points that make the circle.
-The boundary is the part that espilon cannot be equal to.\\
+Putting a neighborhood on one of these points would produce a neighborhood that contains both points in and out of the set.\\
 
 
 \noindent{\bf b} The upper half-plane $\mathbb{H} = \{z:$ Im z $ > 0\}$\\
@@ -1709,14 +1726,14 @@ Here the boundary would be zero, as it is the only point in where epsilon can be
 
 Here the boundary would be a circle with radius 5 centered at the origin and and the unit circle.\\
 
-
 \noindent{\bf e} The empty set $\emptyset$ \\
 
-The boundary is its own set.\\
+There are no points in which the set can have a neighborhood which includes points in and outside of the set.
+However, since the set contains no points, it thus contains it's boundary points and thus the boundary is its own set.\\
 
 \noindent{\bf f} The real line $\mathbb{R} = \{z: $ Im $z = 0\}$\\
 
-The boundary is its own set.\\
+Put any neighborhood on any point in the set and it will contain both points in and out of the set, thus the boundary is its own set.\\
 
 \noindent{\bf g} ${z: -\pi < Im z \leq \pi}$\\
 
@@ -1726,14 +1743,11 @@ Here the boundary is when Im z is equal to $-\pi$ and $\pi$.\\
 
 The boundary is the points included in the set, thus the boundary is its own set.\\
 
-
 \noindent{\bf i} $C \ {1/n: n \in \mathbb{N}, n \neq 0}$\\
 
-The boundary is the set that is being taken out.\\
-
+Here the boundary points would the points are not within the set, because placing a neighborhood on one of those points would both include points in and outside the set.\\
 
 \noindent{\bf Task 83} Show that each of the following is a closed subset of $\mathbb{C}$.\\
-
 
 \noindent{\bf a} $\mathbb{R} = {z: Im z = 0}$ \\
 
@@ -1761,45 +1775,67 @@ There are some points where points are included and when nieghborhoods are drawn
 There are other points where points are not included and can only ever be approached.\\
 
 
-%todo
 \noindent{\bf Task 85} Find the closure of each of the sets in tasks 79, 80, and 84.\\
 
 \noindent{\bf a} $\mathbb{D}$\\
 
-Here the closure would be $\bar{\mathbb{D}}$, 
+Here the closure would be the set that includes its boundary points, 
+this would be the unit circle.\\
 
 \noindent{\bf b} The upper half-plane $\mathbb{H} = \{z:$ Im z $ > 0\}$\\
 
-
+Since the points on the real number axis are not included, these would be the boundary points. 
+Adding the real axis to the points would provide the closure set.\\
 
 \noindent{\bf c} The punctured plane $\mathbb{C}\ {0}$ \\
 
-
-
+Here since zero is the boundary of the open set, simply including it would provide the closure.\\
 
 \noindent{\bf d} An annulus such as A $ = {z: 1 < |z| < 5}$\\
 
+Here the annulus would have two different sets of boundary points, one on the circle of radius 1 and another on the circle of radius 5.
+Unioning both circles would provide the closure of the set.\\
 
 \noindent{\bf e} The empty set $\emptyset$ \\
 
+Here the empty set closure would be the empty set because the set includes its own boundary points.\\
 
 \noindent{\bf f} The real line $\mathbb{R} = \{z: $ Im $z = 0\}$\\
 
+Here the closure would be the set.
+This would have to be the case because the set already contains points in which the neighborhood would have points inside and outside of the set.\\
 
 \noindent{\bf g} ${z: -\pi < Im z \leq \pi}$\\
 
+Here half of the set already has a closure property, since when Im z $ \leq \pi$ it also includes $\pi$. 
+However, $-\pi$ is not included, and thus are boundary points that do not have a closure property. 
+Thus, the closure would simply add Im z $> -\pi$ to the set to have its closure.\\
 
 \noindent{\bf h} ${1/n: n \in \mathbb{N}, n \neq 0}$\\
 
-
+Here the set already has its own boundary points included in the set.
+This is because when a neighborhood is applied to any point on the set, then it will include points inside and outside of the set.\\
 
 \noindent{\bf i} $C \ {1/n: n \in \mathbb{N}, n \neq 0}$\\
 
+Here the boundary points are the points of the set ${1/n: n \in \mathbb{N}, n \neq 0}$, however, adding these points to the set would result in a $\mathbb{C}$ set.
+Thus the closure for this set is $\mathbb{C}$.\\
 
 
 %todo
 \noindent{\bf Task 86} Determine whether each of the following sequences converges, and if so, to what limit.\\
 
+\noindent{\bf a} $z_n = i^n$ \\
+
+\noindent{\bf b} $z_n = i^n/n$ \\
+
+\noindent{\bf c} $z_n = (\frac{1+i}{2})^n$ \\
+
+\noindent{\bf d} $z_n = (1 - i\sqrt{3})^n$\\
+
+\noindent{\bf e} $z_n = 1 - (\frac{i}{\sqrt{2}})^n$\\
+
+\noindent{\bf f} $z_n = (\frac{3}{5} + \frac{4}{5}i)^n$\\
 
 
 %todo
