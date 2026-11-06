@@ -1686,7 +1686,7 @@ This is because of the definition of a neighborhood, it requires the imaginary a
 
 \noindent{\bf b} $\{ z : -\pi < $ Im $z \leq \pi \}$ \\
 
-This creates a strip from \[-\pi\] to \[\pi\], however, since the points on $\pi$ are in the set, you could have a point on that line be used as a point in a neighborhood.\\
+This creates a strip from $-\pi$ to $\pi$, however, since the points on $\pi$ are in the set, you could have a point on that line be used as a point in a neighborhood.\\
 
 
 \noindent{\bf c} ${1/n: n \in \mathbb{N}, n \neq 0}$ \\
@@ -1832,7 +1832,7 @@ This will spin around the unit circle, from 1 to i to -1 to -i back to 1 which m
 \noindent{\bf b} $z_n = i^n/n$ \\
 
 Here the limit does converge to 0.
-The best way to look at this is with the polar form representation, \[ \frac{1^n(\cos(n\theta) + i\sin(n\theta)}{2^n}\].
+The best way to look at this is with the polar form representation, $ \frac{1^n(\cos(n\theta) + i\sin(n\theta)}{2^n}$.
 Here since the magintude of i is always 1, then the denominator will grow infinately large and approach 0.
 Thus the limit for this expression is 0.\\
 
@@ -1846,117 +1846,215 @@ Since the limit is being taking over all of the complex number, the magintude of
 
 \noindent{\bf e} $z_n = 1 - (\frac{i}{\sqrt{2}})^n$\\
 
-Since we can show that \[\frac{1}{\sqrt{2}}^n\] approach 0, then $(\frac{i}{\sqrt{2}})^n$ would also approach 0.
+Since we can show that $\frac{1}{\sqrt{2}}^n$ approach 0, then $(\frac{i}{\sqrt{2}})^n$ would also approach 0.
 Thus the term would be removed and the limit would converge to just 1.\\
 
 \noindent{\bf f} $z_n = (\frac{3}{5} + \frac{4}{5}i)^n$\\
 
-In polar coordinates, the \[1^n(\cos(n\theta) + i\sin(n\theta)\], thus as n approaches infinity, the magnitude would never change, and the angle would only be multiples of the original angle.\\
+In polar coordinates, the $1^n(\cos(n\theta) + i\sin(n\theta)$, thus as n approaches infinity, the magnitude would never change, and the angle would only be multiples of the original angle.\\
 
 
-\noindent{\bf Task 87} Suppose \[ \lim_{n\to\infty} z_n = L_1\] and \[ \lim_{n\to\infty} w_n = L_2\].  
+\noindent{\bf Task 87} Suppose $ \lim_{n\to\infty} z_n = L_1$ and $\lim_{n\to\infty} w_n = L_2$.  
 Use Theorem 1 and convergence properties of sequences of real numbers to explain why 
-\[\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2\] and \[\lim_{n\to\infty} z_nw_n = L_1L_2\].\\
+$\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2$ and $\lim_{n\to\infty} z_nw_n = L_1L_2$.\\
 
-For \[\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2\], 
+For $\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2$, 
 lets have $z_n = x_n + y_ni$ and $w_n = u_n + v_ni$.
 By Theorem 1, Re $L_1 = \lim{n\to\infty} x_n $, Im $L_1 = \lim_{n\to\infty} y_n$, Re $L_2 = \lim{n\to\infty} u_n$, Im $L_1 = \lim_{n\to\infty} y_n$.\\
 
 Then, $z_n + w_n = x_n + y_ni + u_n + v_ni = (x_n+u_n) + i(y_n+v_n)$, which then means we can take the real part and the imaginary parts of both to get:
 $\lim_{n\to\infty} (x_n+u_n) = $Re $ L_1 + L_2$, and $\lim_{n\to\infty} (y_n+v_n) = $Im $ L_1 + L_2$.
 Due to this, with both parts, Theorem 1 makes both parts again. 
-Thus \[\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2\]. 
+Thus $\lim_{n\to\infty} (z_n + w_n) = L_1 + L_2$. 
 
 
-For \[\lim_{n\to\infty} (z_nw_n) = L_1L_2\],
+For $\lim_{n\to\infty} (z_nw_n) = L_1L_2$,
 Similiarly we can break things up into the real and imaginary parts of both limits.
 $\lim_{n\to\infty} ((x_n+y_ni)(u_n+v_ni)) = (x_nu_n - y_nv_n) + i(x_nv_n + y_nu_n)$.
 Here, then the Re $L_1L_2 = x_nu_n - y_nv_n$ and the Im $L_1L_2 = x_nv_n = y_nu_n$. 
-By Theorem 1, both parts make the whole so, \[\lim_{n\to\infty} (z_nw_n) = L_1L_2\].\\
+By Theorem 1, both parts make the whole so, $\lim_{n\to\infty} (z_nw_n) = L_1L_2$.\\
 
 
-%todo
 \noindent{\bf Task 88} \\
 
-\noindent{\bf a} Find sequences $z_n$ and $w_n$ such that \[\lim_{n\to\infty} (z_n + w_n)\] exists but \[\lim_{n\to\infty} z_n\] and  \[\lim_{n\to\infty} w_n\] do not.\\
+\noindent{\bf a} Find sequences $z_n$ and $w_n$ such that $\lim_{n\to\infty} (z_n + w_n)$ exists but $\lim_{n\to\infty} z_n$ and  $\lim_{n\to\infty} w_n$ do not.\\
+
+If we define $\lim_{n\to\infty} z_n = (1 + \sqrt{3}i)^n$ and $\lim_{n\to\infty} w_n = -(1 + \sqrt{3}i)^n$, then they will spiral out forever.
+However, when we add them, they cancel out to zero wil means that their limit would be zero.\\
+
+\noindent{\bf b} Find sequences $z_n$ and $w_n$ such that $\lim_{n\to\infty} z_nw_n$ exists but $\lim_{n\to\infty} z_n$ and  $\lim_{n\to\infty} w_n$ do not.\\
+
+If we define $\lim_{n\to\infty} z_n = i^n$ and $\lim_{n\to\infty} w_n = (\frac{1}{i})^n$ then neither of these limits exist because they will spin around the unit circle.
+However, if we multiply them together, we get 1 as the value and when that is taken to the infinity it will just be 1.\\
 
 
-
-\noindent{\bf b} Find sequences $z_n$ and $w_n$ such that \[\lim_{n\to\infty} z_nw_n\] exists but \[\lim_{n\to\infty} z_n\] and  \[\lim_{n\to\infty} w_n\] do not.\\
-
-
-
-%todo
 \noindent{\bf Task 89} Suppose $B \subset \mathbb{C}$ is closed. Show that if $z_1,z_2,z_3,...$ is a sequence of points in B that converges to a limit L, then $L \in B$.\\
 
+Lets assume that $B \subseteq \mathbb{C}$ and is closed.\\
+
+Proof by contradiction.\\
+Lets say that $L \not\in B$.
+Then definition 3.3.1 states, a sequence in $\mathbb{C}$ is a function $N_+ \mapsto \mathbb{C}$. In other words, it is an ordered list of numbers $z_1,z_2,z_3,...,$ called \textit{terms} of the sequence. 
+A sequence \textit{converges} to the \textit{limit} L if for every $\epsilon > 0$ there exist $n_0 \in \mathbb{N}$ such that $z_n \in N_{\epsilon}(L)$ for all $n > n_0$. 
+If such a number L exists, we write $\lim_{n\to\infty} z_n = L$.
+Given as such since, since our sequence of points do converge onto L and every $z_n$ is within B, then L must be a boundary point.
+Definition 3.2.1. defines boundary points as points where $N_{\epsilon}(L)$ contains both points inside and outside the circle.
+However, B is closed, so L must be contain within B.
+QED.\\
 
 
-%todo
-\noindent{\bf Task 90} Use Definition 3.4.1 and the results of task 87 to show the following.\\
+\noindent{\bf Task 90} Use Definition 3.4.1. and the results of task 87 to show the following.\\
 
-\noindent{\bf a} If $a,b \in \mathbb{C}$ are constants, then \[\lim_{z \to z_0} (az+b) = az_0 + b\].\\
+\noindent{\bf a} If $a,b \in \mathbb{C}$ are constants, then $\lim_{z \to z_0} (az+b) = az_0 + b$.\\
 
-\noindent{\bf b} \[\lim_{z \to z_0} z^n = z^{n}_{0}\] for all $n \geq 1$.\\
+If we say that $f(z) = az + b$, then with Definition 3.4.1. we can say that $\lim_{z\to z_0} z_n = z_0$ is true and that $f(z_0) = w_0$ where $w_0 = az_0 + b$.\\
+
+\noindent{\bf b} $\lim_{z \to z_0} z^n = z^{n}_{0}$ for all $n \geq 1$.\\
+
+With the limit, we can say that $f(z) = z^n$, then we can say $\lim_{z\to z_0} z^{n-1}z = z^{n-1}z_0$.
+
+Proof by induction.\\
+
+Base case: $\lim_{n\to z_0} z^n = z^{n-1}z = z^{n-1}z_0$.\\
+Hypothesis: $\lim_{n \to z_0} z^{n-k}z^k_0$\\
+Inductive Reasoning: $\lim_{n \to z_0} z^{n-k}z^k_0 = z^{n-k-1}z^{k+1}_0$\\
 
 
-
-%todo
 \noindent{\bf Task 91} Determine whether each of the following limits exists, and if so what number it equals.\\
 
-\noindent{\bf a} \[\lim_{z \to 1+i} iz^2 - 2\bar{z} + 1\] \\
+\noindent{\bf a} $\lim_{z \to 1+i} iz^2 - 2\bar{z} + 1$ \\
+The limit can just be plugged within the equation.\\
+$i(1+i)^2 - 2(1-i) + 1$\\
+$i(1-1 + 2i) - 2 + 2i + 1$\\
+$i(2i) - 1 + 2i$\\
+$-2 - 1 + 2i$\\
+$-3 + 2i$\\
 
-\noindent{\bf b} \[\lim_{z \to i} \frac{z^2 + 1}{z-i}\] \\
-
-\noindent{\bf c} \[\lim_{z \to 1+2i} |z|\] \\
-
-\noindent{\bf d} \[\lim_{z \to 0} \frac{\bar{z}}{z}\] \\
-
-\noindent{\bf e} \[\lim_{z \to 1} \frac{|z|-1}{z-1}\] \\
-
-\noindent{\bf f} \[\lim_{z \to 0} (\frac{\bar{z}}{z})^2\] \\
+\noindent{\bf b} $\lim_{z \to i} \frac{z^2 + 1}{z-i}$ \\
+$\lim_{z \to i} \frac{z^2+1}{z-i}$\\
+$\lim_{z \to i} \frac{(z-i)(z+i)}{z-i}$\\
+$\lim_{z \to i} (z+i)$\\
+$2i$\\
 
 
+\noindent{\bf c} $\lim_{z \to 1+2i} |z|$ \\
+This limit is simply the modulus of 1+2i.\\
+$\lim_{z \to 1 + 2i} |z|$\\
+$|1+2i| = \sqrt{5}$\\
 
-%todo
+
+\noindent{\bf d} $\lim_{z \to 0} \frac{\bar{z}}{z}$ \\
+This limit does not exist, if you approach it from the imaginary axis, you get the answer to be -1. 
+If you approach it from the real axis, you get 1.\\
+
+\noindent{\bf e} $\lim_{z \to 1} \frac{|z|-1}{z-1}$ \\
+This limit does not exist, if you apporach it from the real axis you get 1, from the imaginary axis you get 0.\\
+
+\noindent{\bf f} $\lim_{z \to 0} (\frac{\bar{z}}{z})^2$ \\
+This limit does not exist, I did this in polar coordinates:\\
+$z = r(\cos(\theta) + i\sin(\theta))$, $\bar{z} = r(\cos(\theta) - i\sin(\theta))$\\
+
+For $\frac{\bar{z}}{z}$ we get the cosines and sines on the top and bottom, but what is the angle of 0? 
+This question does not make sense, so this limit does not exist.\\
+
+
 \noindent{\bf Task 92} \\
 
 \noindent{\bf a} Explain why $z \mapsto \bar{z}$ is continuous.\\
 
+Here the function is continous because there are no holes, jumps, or asymptotes on the graph.
+We can plug in $z = a + bi$, where $a,b \in \mathbb{Q}$, and no gaps or holes will appears.\\
 
 \noindent{\bf b} Explain why $z \mapsto z^2$ is continuous.\\
 
+Similiarly, we can take the same steps as in the last probelm, $z = a + bi$ where $a,b \in \mathbb{Q}$ to find no holes, jumps or asymptotes.\\
 
 \noindent{\bf c} Explain why $z \mapsto \sqrt{z}$ is not continuous.\\
 
+Since we are working on the imaginary plane, it is possible for $a,b \in \mathbb{Q}$, however, since the square root of a function provides two answers both negative and positive, there could be a jump from solution to solution which would make it not continous.\\
 
 
-%todo
 \noindent{\bf Task 93} Find an open subset U of $\mathbb{C}$, as large as possible, on which $z \mapsto z^2$ is one-to-one.
 What is the image of U? Call this image V. 
 How can you tell that $z \mapsto \sqrt{z}$ is continuous on V?\\
+
+Lets label U as $\{z : $ Im$ z > 0, $ Re $z > 0 \}$.
+This will produce an image V that will still be $\{z : $ Im$ z > 0, $ Re $z > 0 \}$.
+Given this, since the function is one to one, there can only be one input and one output, so we can take the princple square root here since Re z and Im z > 0.
+Thus, the $z \mapsto \sqrt{z}$ must be continuous on that subset.\\
 
 
 \begin{center}
 \textbf{\large Chapter 4}
 \end{center}
+%\noindent{\bf a} \\
+
+
+\noindent{\bf Task 94} Using Definition 4.1.1. show the following. \\
+
+\noindent{\bf a} The complex derivative of a constant function is zero at every point.\\
+
+If the function is a constant then its rate of change will always be zero, and thus will result in a zero at every point.
+$f(z) = a$, then: $f(z_0) = a$.
+Thus $f(z_0 + h) - f(z_0) = 0$.\\
+
+\noindent{\bf b} The complex derivative of an affine function is a constant function.\\
+
+$f(z) = az + b$, then $f(z_0) = az_0 + b$ and $f(z_0 + h) = a(z_0 + h) + b$.
+
+Then $\lim_{h\to 0} \frac{az_0 + ah + b - az_0 - b}{h} = \frac{ah}{h} = a$.\\
+
+
+\noindent{\bf c} The complex derivative of $z \mapsto z^2$ at $z_0$ is $2z_0$.\\
+
+$f(z) = z^2$, then $f(z_0) = z^2_0$.
+
+Then $\lim_{z\to z_0} \frac{z^2 - z^2_0}{z-z_0} = \frac{(z-z_0)(z+z_0)}{z-z_0} = z+z_0 = 2z_0$.\\
+
+
+%todo
+\noindent{\bf Task 95} Show that the following functions are \underline{not} complex differentiable.\\
+
+\noindent{\bf a} $z \mapsto $ Re $z$\\
+
+Using the limit h to 0 definition, we can understand that h can be a complex number as well. 
+This allows us to do the following: $\lim_{h\to 0}\frac{\Re(z + h) - \Re(z)}{h} = \frac{\Re(h)}{h}$.
+
+
+\noindent{\bf b} $z \mapsto \bar{z}$\\
+
+
+\noindent{\bf c} $z \mapsto |z|^2$\\
 
 
 
 %todo
-\noindent{\bf Task 94} \\
-%todo
-\noindent{\bf Task 95} \\
-%todo
-\noindent{\bf Task 96} \\
+\noindent{\bf Task 96} Show that if $f$ is differentiable at $z_0$, then it is continuous at $z_0$.\\
+%\noindent{\bf a} \\
+
+
 %todo
 \noindent{\bf Task 97} \\
+%\noindent{\bf a} \\
+
+
 %todo
 \noindent{\bf Task 98} \\
+%\noindent{\bf a} \\
+
+
 %todo
 \noindent{\bf Task 99} \\
+%\noindent{\bf a} \\
+
+
 %todo
 \noindent{\bf Task 100} \\
+%\noindent{\bf a} \\
+
+
 %todo
 \noindent{\bf Task 101} \\
+%\noindent{\bf a} \\
 
 \end{document}
