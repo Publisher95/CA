@@ -1971,7 +1971,8 @@ Similiarly, we can take the same steps as in the last probelm, $z = a + bi$ wher
 
 \noindent{\bf c} Explain why $z \mapsto \sqrt{z}$ is not continuous.\\
 
-Since we are working on the imaginary plane, it is possible for $a,b \in \mathbb{Q}$, however, since the square root of a function provides two answers both negative and positive, there could be a jump from solution to solution which would make it not continous.\\
+
+
 
 
 \noindent{\bf Task 93} Find an open subset U of $\mathbb{C}$, as large as possible, on which $z \mapsto z^2$ is one-to-one.
@@ -2012,20 +2013,31 @@ $f(z) = z^2$, then $f(z_0) = z^2_0$.
 Then $\lim_{z\to z_0} \frac{z^2 - z^2_0}{z-z_0} = \frac{(z-z_0)(z+z_0)}{z-z_0} = z+z_0 = 2z_0$.\\
 
 
-%todo
 \noindent{\bf Task 95} Show that the following functions are \underline{not} complex differentiable.\\
 
 \noindent{\bf a} $z \mapsto $ Re $z$\\
 
 Using the limit h to 0 definition, we can understand that h can be a complex number as well. 
 This allows us to do the following: $\lim_{h\to 0}\frac{\Re(z + h) - \Re(z)}{h} = \frac{\Re(h)}{h}$.
-
+If we then set $h = a + bi$, we end up with $\lim_{a+bi \to 0}\frac{a}{a+bi}$ and if we take the limit of either side we get two different answers 0 or 1.\\
 
 \noindent{\bf b} $z \mapsto \bar{z}$\\
 
+Here we can have $f(z) = \bar{z}$ and $f(z) = \overline{z + h} = \bar{z} + \bar{h}$.
+Then $\lim_{h\to 0 } \frac{\bar{z} + \bar{h} - \bar{z}}{h} = \frac{\bar{h}}{h}$. 
+This final limit we know does not exist so it cannot be complex differentiable.\\
 
 \noindent{\bf c} $z \mapsto |z|^2$\\
 
+$z = a + bi$, $h = x + yi$.\\
+
+Here we can have $f(z) = |z|^2 = a^2+b^2$ and $f(z+h) = (a+x)^2 + (b+y)^2 = x^2 + ax + a^2 + y^2 + 2by + b^2$.
+Then when we use the definition 4.1.1, we get $\lim_{a+bi \to 0}\frac{x^2 + ax + a^2 + y^2 + 2by + b^2 - x^2 - y^2}{a+bi} =$
+$\lim_{a+bi \to 0} \frac{2ax + a^2 + 2by + b^2}{a+bi}$.
+
+Here if we take the limit on either side we get a variable limit, where real axis is $-2yi$ and the imaginary axis is $2x$. 
+
+So when the number is zero, then the function is differentiable.\\
 
 
 %todo
@@ -2034,12 +2046,12 @@ This allows us to do the following: $\lim_{h\to 0}\frac{\Re(z + h) - \Re(z)}{h} 
 
 
 %todo
-\noindent{\bf Task 97} \\
+\noindent{\bf Task 97} Use the limit definition of the derivative to show that if $f$ and $g$ are differentiable and $c \in \mathbb{C}$, then the following rules apply: sum rule, coefficient rule, product rule.\\
 %\noindent{\bf a} \\
 
 
 %todo
-\noindent{\bf Task 98} \\
+\noindent{\bf Task 98} Show that, for any $n \in \mathbb{N}_+$, the derivative of $f(z) = z^n$ is $f'(z) = nz^{n-1}$.\\
 %\noindent{\bf a} \\
 
 
