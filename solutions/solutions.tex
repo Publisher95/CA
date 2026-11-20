@@ -2053,7 +2053,6 @@ $\lim_{z\to z_0} f'(z)(z - z_0)$\\
 Clearly the function is differentiable at $z_0$ and continuous at $z_0$ because if we take the limit then we get 0.\\
 
 
-%todo
 \noindent{\bf Task 97} Use the limit definition of the derivative to show that if $f$ and $g$ are differentiable and $c \in \mathbb{C}$, then the following rules apply: sum rule, coefficient rule, product rule.\\
 
 \noindent{\bf a} Sum rule\\
@@ -2066,26 +2065,85 @@ Since the derivative of a function is a limit, then we know that constants can b
 Thus, $\frac{d}{dz} cf(z) = c \frac{d}{dz} f(z) = cf'(z)$\\
 
 \noindent{\bf c} Product rule\\
+We are given $f(z)g(z)$, and if we set up the complex derivative, we can get the limit definition:\\
+$\lim_{h\to0} \frac{g(z+h)f(z+h)-g(z)f(z)}{h}$\\
+Looking at this it is not obvious where to go. Instead we should look at each of the individual elements within the equation: $\lim_{h\to0} \frac{g(z+h)f(z+h)}{h}$.\\
+Here, we can see that we can solve for either the $f'(z)$ or $g'(z)$ by substracting either $\frac{f(z)g(z+h)}{h}$ or $\frac{f(z+h)g(z)}{h}$. 
+For my solution I chose to solve for $f'(z)$, but the other way works as well. \\
+
+So, now I have $\lim_{h\to0}g(z+h)*f'(z) - \frac{f(z)g(z)}{h}$, which seems like a probelm until it is seen that since we subtracted amounts, we have to equally add those amounts to make zero, since this would be a vaild way of constructing zero. 
+Therefore, $g(z)f'(z) + \lim_{h\to0} \frac{f(z)g(z+h)-f(z)g(z)}{h}$, which reveals another limit derivative after we factor out $f(z)$.
+Thus, the final derivative is $f'(z)g(z) + f(z)g'(z)$.\\
 
 
-
-%todo
 \noindent{\bf Task 98} Show that, for any $n \in \mathbb{N}_+$, the derivative of $f(z) = z^n$ is $f'(z) = nz^{n-1}$.\\
 %\noindent{\bf a} \\
+If we start $g(z) = z^2$, we can take the derviative of the function to get $\lim_{h\to0}\frac{(z+h)^2 - z^2}{h}$ which produces $\lim_{h\to0}\frac{z^2 + 2zh + h^2 - z^2}{h} = \lim_{h\to0} 2z + h = 2z$.\\
+Here, we can see that if we use the inductive case, then we get the idea that $\frac{d}{dz}z^{2+1} = (2+1)z^2$. 
+Thus, we can say that $\frac{d}{dz} z^k = kz^{k-1}$.
+Therefore, $\frac{d}{dz} z^n = nz^{n-1}$.\\
+
+\noindent{\bf Task 99} Show that any polynomial $p(z) = a_nz^n + a_{n-1}z^{n-1} + ... + a_1z + a_0$ is complex differentiable. \\
+%\noindent{\bf a} \\
+Here our polynomial can be understood as the derivative of a sum rule, thus the terms can be differentiable by themselves.
+Therefore, $\frac{d}{dz} p(z) = \frac{d}{dz} a_nz^n + \frac{d}{dz} a_{n-1}z^{n-1} + ... + \frac{d}{dz} a_1z + \frac{d}{dz} a_0$.
+Then, we know that by task 98 that any $z^n$ can have a derivative taken of it. 
+Thus, the polynomial function can be differentiable and is $p'(z) = na_nz^{n-1} + (n-1)a_{n-1}z^{n-2} + ... + a_1$.\\
+
+
+\noindent{\bf Task 100} Show that, for any $n \in \mathbb{N}_+$, the derivative of $f(z) = z^{-n} = 1/z^n$ is $f'(z) = -nz^{-n-1}$\\
+%\noindent{\bf a} \\
+Here we can use the quotient rule, $f(z) = 1, g(z) = z^n$.
+so, $\frac{d}{dz} \frac{f(z)}{g(z)} = \frac{g(z)f'(z) - f(z)g'(z)}{(g(z))^2}$.\\
+This becomes $\frac{0(z^n) - 1(nz^{n-1})}{z^{2n}}$.\\
+This then can be reduced into a simple problem of $-nz^{n-1-2n}$ which equals $-nz^{-n-1}$.\\
+Thus, the derivative of $f(z) = z^{-n}$ is $-nz^{-n-1}$.\\
+
+%todo
+\noindent{\bf Task 101} Show that, for any $n \in \mathbb{N}_+$, the derivative of $f(z) = z^{1/n}$ is $f'(z) = \frac{1}{n}z^{(1/n)-1}$.\\
+%\noindent{\bf a} \\
+
+
+
 
 
 %todo
-\noindent{\bf Task 99} \\
+\noindent{\bf Task 102} \\
 %\noindent{\bf a} \\
 
 
 %todo
-\noindent{\bf Task 100} \\
+\noindent{\bf Task 103} \\
 %\noindent{\bf a} \\
 
 
 %todo
-\noindent{\bf Task 101} \\
+\noindent{\bf Task 104} \\
 %\noindent{\bf a} \\
+
+%todo
+\noindent{\bf Task 105} \\
+%\noindent{\bf a} \\
+
+%todo
+\noindent{\bf Task 106} \\
+%\noindent{\bf a} \\
+
+%todo
+\noindent{\bf Task 107} \\
+%\noindent{\bf a} \\
+
+%todo
+\noindent{\bf Task 108} \\
+%\noindent{\bf a} \\
+
+%todo
+\noindent{\bf Task 109} \\
+%\noindent{\bf a} \\
+
+%todo
+\noindent{\bf Task 110} \\
+%\noindent{\bf a} \\
+
 
 \end{document}
